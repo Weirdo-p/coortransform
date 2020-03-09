@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/plotTrajectory",//该项填写生成的可执行文件的实际路径，注意后缀名
+            "args": [],//如果要给main函数传参数，在此添加。注意每项要加引号并用逗号隔开
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask":"echo"//新建该项，这样就可以每次按F5运行程序之前先执行task.json的内容，也就是重新编译和生成程序
+            //注意该项的内容要与tasks.json中的prelaunch的内容一致
+        }
+    ]
+}

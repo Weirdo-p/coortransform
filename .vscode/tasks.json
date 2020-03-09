@@ -1,0 +1,16 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "echo",//这里的名称记住，需要跟launch.json中的preLaunchTask一项的内容相同
+            "type": "shell",
+            "command": "bash .vscode/build.sh",//build.sh文件需要自己编写
+            "group":{//新建该项
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
