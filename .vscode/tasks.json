@@ -4,10 +4,10 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "echo",//这里的名称记住，需要跟launch.json中的preLaunchTask一项的内容相同
+            "label": "echo",
             "type": "shell",
-            "command": "bash .vscode/build.sh",//build.sh文件需要自己编写
-            "group":{//新建该项
+            "command": "bash .vscode/build.sh",
+            "group": {
                 "kind": "build",
                 "isDefault": true
             }
