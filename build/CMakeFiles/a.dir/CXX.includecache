@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/xz/coding/coortransform/include/common.h
+vector
+-
+Eigen/Core
+-
+Eigen/Dense
+-
+
+/home/xz/coding/coortransform/include/utils.h
+iostream
+-
+string
+-
+fstream
+-
+common.h
+/home/xz/coding/coortransform/include/common.h
+
+/home/xz/coding/coortransform/src/main.cpp
+../include/utils.h
+/home/xz/coding/coortransform/include/utils.h
+iomanip
+-
+
+/home/xz/coding/coortransform/src/utils.cpp
+../include/utils.h
+/home/xz/coding/coortransform/include/utils.h
+

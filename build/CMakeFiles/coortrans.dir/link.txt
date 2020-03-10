@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/coortrans.dir/src/main.o CMakeFiles/coortrans.dir/src/utils.o  -o coortrans 

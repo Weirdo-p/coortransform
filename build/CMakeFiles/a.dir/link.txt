@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/a.dir/src/main.o CMakeFiles/a.dir/src/utils.o  -o a 

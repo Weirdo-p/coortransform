@@ -1,0 +1,3 @@
+/home/xz/coding/coortransform/build/CMakeFiles/rebuild_cache.dir
+/home/xz/coding/coortransform/build/CMakeFiles/a.dir
+/home/xz/coding/coortransform/build/CMakeFiles/edit_cache.dir
