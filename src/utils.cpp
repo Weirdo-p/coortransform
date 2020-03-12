@@ -1,14 +1,7 @@
 #include "../include/utils.h"
 
 
-void isOut(int &i, int &j, int num)
-{
-    if(j >= num)
-    {
-        i++;
-        j -= j;
-    }
-}
+
 
 double string2double(string a)
 {
@@ -28,7 +21,6 @@ vector31d GetData(string path)
         cerr << "open file incorrectly!" << endl;
         exit(1);
     }
-    cout << "reading all the data in the file..." << endl;
     vector31d data;
     int j = 0, count = 0;
     while(!in.eof())
@@ -49,7 +41,6 @@ vector31d GetData(string path)
             islast = true;
         }
         double num = string2double(tmp);
-        cout << num << "        test" << endl;
         vec(j, 0) = num;
         j++;
         count++;
