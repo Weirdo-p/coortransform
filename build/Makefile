@@ -124,6 +124,21 @@ a/fast:
 .PHONY : a/fast
 
 # target to build an object file
+src/coortrans_4p.o:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/src/coortrans_4p.o
+.PHONY : src/coortrans_4p.o
+
+# target to preprocess a source file
+src/coortrans_4p.i:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/src/coortrans_4p.i
+.PHONY : src/coortrans_4p.i
+
+# target to generate assembly for a file
+src/coortrans_4p.s:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/src/coortrans_4p.s
+.PHONY : src/coortrans_4p.s
+
+# target to build an object file
 src/main.o:
 	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/src/main.o
 .PHONY : src/main.o
@@ -162,6 +177,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... a"
 	@echo "... edit_cache"
+	@echo "... src/coortrans_4p.o"
+	@echo "... src/coortrans_4p.i"
+	@echo "... src/coortrans_4p.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

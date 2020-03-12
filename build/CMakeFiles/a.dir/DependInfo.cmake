@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/xz/coding/coortransform/src/coortrans_4p.cpp" "/home/xz/coding/coortransform/build/CMakeFiles/a.dir/src/coortrans_4p.o"
   "/home/xz/coding/coortransform/src/main.cpp" "/home/xz/coding/coortransform/build/CMakeFiles/a.dir/src/main.o"
   "/home/xz/coding/coortransform/src/utils.cpp" "/home/xz/coding/coortransform/build/CMakeFiles/a.dir/src/utils.o"
   )
