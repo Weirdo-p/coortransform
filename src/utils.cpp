@@ -12,7 +12,7 @@ double string2double(string a)
     return num;
 }
 
-vector31d GetData(string path)
+MatrixN1d SetData(string path)
 {
     ifstream in;
     in.open(path);
@@ -51,6 +51,16 @@ vector31d GetData(string path)
             islast = false;
         }
     }
-    return data;
+    MatrixN1d pointA(data.size() * 3, 1);
+    j = 0;
+    for(auto da : data)
+    {
+        for(int k = 0; k < da.rows(); ++k)
+        {
+            pointA(j, 0) = da(k, 0);
+            j++;
+        }
+    }
+    return pointA;
 }
 
