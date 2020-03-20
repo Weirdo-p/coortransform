@@ -1,5 +1,8 @@
 #include "common.h"
 
+
+#ifndef _UTILS_H_
+#define _UTILS_H_
 /**
  * last edited at 9th March by xz
  * function    to judge if index out of range
@@ -20,5 +23,7 @@ double string2double(string a);
  * param path  the path of the data file
  * ***************************************************
  */
-vector31d GetData(string path);
+MatrixN1d SetData(string path);
 
+
+#endif
