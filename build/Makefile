@@ -124,6 +124,51 @@ a/fast:
 .PHONY : a/fast
 
 # target to build an object file
+src/XYZ2BLH.o:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/src/XYZ2BLH.o
+.PHONY : src/XYZ2BLH.o
+
+# target to preprocess a source file
+src/XYZ2BLH.i:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/src/XYZ2BLH.i
+.PHONY : src/XYZ2BLH.i
+
+# target to generate assembly for a file
+src/XYZ2BLH.s:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/src/XYZ2BLH.s
+.PHONY : src/XYZ2BLH.s
+
+# target to build an object file
+src/XYZ2NEU.o:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/src/XYZ2NEU.o
+.PHONY : src/XYZ2NEU.o
+
+# target to preprocess a source file
+src/XYZ2NEU.i:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/src/XYZ2NEU.i
+.PHONY : src/XYZ2NEU.i
+
+# target to generate assembly for a file
+src/XYZ2NEU.s:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/src/XYZ2NEU.s
+.PHONY : src/XYZ2NEU.s
+
+# target to build an object file
+src/coortrans_13p_iter.o:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/src/coortrans_13p_iter.o
+.PHONY : src/coortrans_13p_iter.o
+
+# target to preprocess a source file
+src/coortrans_13p_iter.i:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/src/coortrans_13p_iter.i
+.PHONY : src/coortrans_13p_iter.i
+
+# target to generate assembly for a file
+src/coortrans_13p_iter.s:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/src/coortrans_13p_iter.s
+.PHONY : src/coortrans_13p_iter.s
+
+# target to build an object file
 src/coortrans_4p.o:
 	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/src/coortrans_4p.o
 .PHONY : src/coortrans_4p.o
@@ -137,6 +182,21 @@ src/coortrans_4p.i:
 src/coortrans_4p.s:
 	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/src/coortrans_4p.s
 .PHONY : src/coortrans_4p.s
+
+# target to build an object file
+src/coortrans_7p_iter.o:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/src/coortrans_7p_iter.o
+.PHONY : src/coortrans_7p_iter.o
+
+# target to preprocess a source file
+src/coortrans_7p_iter.i:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/src/coortrans_7p_iter.i
+.PHONY : src/coortrans_7p_iter.i
+
+# target to generate assembly for a file
+src/coortrans_7p_iter.s:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/src/coortrans_7p_iter.s
+.PHONY : src/coortrans_7p_iter.s
 
 # target to build an object file
 src/main.o:
@@ -177,9 +237,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... a"
 	@echo "... edit_cache"
+	@echo "... src/XYZ2BLH.o"
+	@echo "... src/XYZ2BLH.i"
+	@echo "... src/XYZ2BLH.s"
+	@echo "... src/XYZ2NEU.o"
+	@echo "... src/XYZ2NEU.i"
+	@echo "... src/XYZ2NEU.s"
+	@echo "... src/coortrans_13p_iter.o"
+	@echo "... src/coortrans_13p_iter.i"
+	@echo "... src/coortrans_13p_iter.s"
 	@echo "... src/coortrans_4p.o"
 	@echo "... src/coortrans_4p.i"
 	@echo "... src/coortrans_4p.s"
+	@echo "... src/coortrans_7p_iter.o"
+	@echo "... src/coortrans_7p_iter.i"
+	@echo "... src/coortrans_7p_iter.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

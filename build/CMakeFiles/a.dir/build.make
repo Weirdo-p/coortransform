@@ -57,9 +57,81 @@ include CMakeFiles/a.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/a.dir/flags.make
 
+CMakeFiles/a.dir/src/XYZ2BLH.o: CMakeFiles/a.dir/flags.make
+CMakeFiles/a.dir/src/XYZ2BLH.o: ../src/XYZ2BLH.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xz/coding/coortransform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/a.dir/src/XYZ2BLH.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a.dir/src/XYZ2BLH.o -c /home/xz/coding/coortransform/src/XYZ2BLH.cpp
+
+CMakeFiles/a.dir/src/XYZ2BLH.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.dir/src/XYZ2BLH.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xz/coding/coortransform/src/XYZ2BLH.cpp > CMakeFiles/a.dir/src/XYZ2BLH.i
+
+CMakeFiles/a.dir/src/XYZ2BLH.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.dir/src/XYZ2BLH.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xz/coding/coortransform/src/XYZ2BLH.cpp -o CMakeFiles/a.dir/src/XYZ2BLH.s
+
+CMakeFiles/a.dir/src/XYZ2BLH.o.requires:
+
+.PHONY : CMakeFiles/a.dir/src/XYZ2BLH.o.requires
+
+CMakeFiles/a.dir/src/XYZ2BLH.o.provides: CMakeFiles/a.dir/src/XYZ2BLH.o.requires
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/src/XYZ2BLH.o.provides.build
+.PHONY : CMakeFiles/a.dir/src/XYZ2BLH.o.provides
+
+CMakeFiles/a.dir/src/XYZ2BLH.o.provides.build: CMakeFiles/a.dir/src/XYZ2BLH.o
+
+
+CMakeFiles/a.dir/src/XYZ2NEU.o: CMakeFiles/a.dir/flags.make
+CMakeFiles/a.dir/src/XYZ2NEU.o: ../src/XYZ2NEU.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xz/coding/coortransform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/a.dir/src/XYZ2NEU.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a.dir/src/XYZ2NEU.o -c /home/xz/coding/coortransform/src/XYZ2NEU.cpp
+
+CMakeFiles/a.dir/src/XYZ2NEU.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.dir/src/XYZ2NEU.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xz/coding/coortransform/src/XYZ2NEU.cpp > CMakeFiles/a.dir/src/XYZ2NEU.i
+
+CMakeFiles/a.dir/src/XYZ2NEU.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.dir/src/XYZ2NEU.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xz/coding/coortransform/src/XYZ2NEU.cpp -o CMakeFiles/a.dir/src/XYZ2NEU.s
+
+CMakeFiles/a.dir/src/XYZ2NEU.o.requires:
+
+.PHONY : CMakeFiles/a.dir/src/XYZ2NEU.o.requires
+
+CMakeFiles/a.dir/src/XYZ2NEU.o.provides: CMakeFiles/a.dir/src/XYZ2NEU.o.requires
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/src/XYZ2NEU.o.provides.build
+.PHONY : CMakeFiles/a.dir/src/XYZ2NEU.o.provides
+
+CMakeFiles/a.dir/src/XYZ2NEU.o.provides.build: CMakeFiles/a.dir/src/XYZ2NEU.o
+
+
+CMakeFiles/a.dir/src/coortrans_13p_iter.o: CMakeFiles/a.dir/flags.make
+CMakeFiles/a.dir/src/coortrans_13p_iter.o: ../src/coortrans_13p_iter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xz/coding/coortransform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/a.dir/src/coortrans_13p_iter.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a.dir/src/coortrans_13p_iter.o -c /home/xz/coding/coortransform/src/coortrans_13p_iter.cpp
+
+CMakeFiles/a.dir/src/coortrans_13p_iter.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.dir/src/coortrans_13p_iter.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xz/coding/coortransform/src/coortrans_13p_iter.cpp > CMakeFiles/a.dir/src/coortrans_13p_iter.i
+
+CMakeFiles/a.dir/src/coortrans_13p_iter.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.dir/src/coortrans_13p_iter.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xz/coding/coortransform/src/coortrans_13p_iter.cpp -o CMakeFiles/a.dir/src/coortrans_13p_iter.s
+
+CMakeFiles/a.dir/src/coortrans_13p_iter.o.requires:
+
+.PHONY : CMakeFiles/a.dir/src/coortrans_13p_iter.o.requires
+
+CMakeFiles/a.dir/src/coortrans_13p_iter.o.provides: CMakeFiles/a.dir/src/coortrans_13p_iter.o.requires
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/src/coortrans_13p_iter.o.provides.build
+.PHONY : CMakeFiles/a.dir/src/coortrans_13p_iter.o.provides
+
+CMakeFiles/a.dir/src/coortrans_13p_iter.o.provides.build: CMakeFiles/a.dir/src/coortrans_13p_iter.o
+
+
 CMakeFiles/a.dir/src/coortrans_4p.o: CMakeFiles/a.dir/flags.make
 CMakeFiles/a.dir/src/coortrans_4p.o: ../src/coortrans_4p.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xz/coding/coortransform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/a.dir/src/coortrans_4p.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xz/coding/coortransform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/a.dir/src/coortrans_4p.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a.dir/src/coortrans_4p.o -c /home/xz/coding/coortransform/src/coortrans_4p.cpp
 
 CMakeFiles/a.dir/src/coortrans_4p.i: cmake_force
@@ -81,9 +153,33 @@ CMakeFiles/a.dir/src/coortrans_4p.o.provides: CMakeFiles/a.dir/src/coortrans_4p.
 CMakeFiles/a.dir/src/coortrans_4p.o.provides.build: CMakeFiles/a.dir/src/coortrans_4p.o
 
 
+CMakeFiles/a.dir/src/coortrans_7p_iter.o: CMakeFiles/a.dir/flags.make
+CMakeFiles/a.dir/src/coortrans_7p_iter.o: ../src/coortrans_7p_iter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xz/coding/coortransform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/a.dir/src/coortrans_7p_iter.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a.dir/src/coortrans_7p_iter.o -c /home/xz/coding/coortransform/src/coortrans_7p_iter.cpp
+
+CMakeFiles/a.dir/src/coortrans_7p_iter.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.dir/src/coortrans_7p_iter.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xz/coding/coortransform/src/coortrans_7p_iter.cpp > CMakeFiles/a.dir/src/coortrans_7p_iter.i
+
+CMakeFiles/a.dir/src/coortrans_7p_iter.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.dir/src/coortrans_7p_iter.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xz/coding/coortransform/src/coortrans_7p_iter.cpp -o CMakeFiles/a.dir/src/coortrans_7p_iter.s
+
+CMakeFiles/a.dir/src/coortrans_7p_iter.o.requires:
+
+.PHONY : CMakeFiles/a.dir/src/coortrans_7p_iter.o.requires
+
+CMakeFiles/a.dir/src/coortrans_7p_iter.o.provides: CMakeFiles/a.dir/src/coortrans_7p_iter.o.requires
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/src/coortrans_7p_iter.o.provides.build
+.PHONY : CMakeFiles/a.dir/src/coortrans_7p_iter.o.provides
+
+CMakeFiles/a.dir/src/coortrans_7p_iter.o.provides.build: CMakeFiles/a.dir/src/coortrans_7p_iter.o
+
+
 CMakeFiles/a.dir/src/main.o: CMakeFiles/a.dir/flags.make
 CMakeFiles/a.dir/src/main.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xz/coding/coortransform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/a.dir/src/main.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xz/coding/coortransform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/a.dir/src/main.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a.dir/src/main.o -c /home/xz/coding/coortransform/src/main.cpp
 
 CMakeFiles/a.dir/src/main.i: cmake_force
@@ -107,7 +203,7 @@ CMakeFiles/a.dir/src/main.o.provides.build: CMakeFiles/a.dir/src/main.o
 
 CMakeFiles/a.dir/src/utils.o: CMakeFiles/a.dir/flags.make
 CMakeFiles/a.dir/src/utils.o: ../src/utils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xz/coding/coortransform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/a.dir/src/utils.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xz/coding/coortransform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/a.dir/src/utils.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a.dir/src/utils.o -c /home/xz/coding/coortransform/src/utils.cpp
 
 CMakeFiles/a.dir/src/utils.i: cmake_force
@@ -131,19 +227,27 @@ CMakeFiles/a.dir/src/utils.o.provides.build: CMakeFiles/a.dir/src/utils.o
 
 # Object files for target a
 a_OBJECTS = \
+"CMakeFiles/a.dir/src/XYZ2BLH.o" \
+"CMakeFiles/a.dir/src/XYZ2NEU.o" \
+"CMakeFiles/a.dir/src/coortrans_13p_iter.o" \
 "CMakeFiles/a.dir/src/coortrans_4p.o" \
+"CMakeFiles/a.dir/src/coortrans_7p_iter.o" \
 "CMakeFiles/a.dir/src/main.o" \
 "CMakeFiles/a.dir/src/utils.o"
 
 # External object files for target a
 a_EXTERNAL_OBJECTS =
 
+a : CMakeFiles/a.dir/src/XYZ2BLH.o
+a : CMakeFiles/a.dir/src/XYZ2NEU.o
+a : CMakeFiles/a.dir/src/coortrans_13p_iter.o
 a : CMakeFiles/a.dir/src/coortrans_4p.o
+a : CMakeFiles/a.dir/src/coortrans_7p_iter.o
 a : CMakeFiles/a.dir/src/main.o
 a : CMakeFiles/a.dir/src/utils.o
 a : CMakeFiles/a.dir/build.make
 a : CMakeFiles/a.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xz/coding/coortransform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xz/coding/coortransform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable a"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/a.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -151,7 +255,11 @@ CMakeFiles/a.dir/build: a
 
 .PHONY : CMakeFiles/a.dir/build
 
+CMakeFiles/a.dir/requires: CMakeFiles/a.dir/src/XYZ2BLH.o.requires
+CMakeFiles/a.dir/requires: CMakeFiles/a.dir/src/XYZ2NEU.o.requires
+CMakeFiles/a.dir/requires: CMakeFiles/a.dir/src/coortrans_13p_iter.o.requires
 CMakeFiles/a.dir/requires: CMakeFiles/a.dir/src/coortrans_4p.o.requires
+CMakeFiles/a.dir/requires: CMakeFiles/a.dir/src/coortrans_7p_iter.o.requires
 CMakeFiles/a.dir/requires: CMakeFiles/a.dir/src/main.o.requires
 CMakeFiles/a.dir/requires: CMakeFiles/a.dir/src/utils.o.requires
 
