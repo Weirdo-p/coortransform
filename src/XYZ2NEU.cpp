@@ -5,6 +5,7 @@ using namespace std;
 
 XYZ2NEU::XYZ2NEU(string datapath, string savepath, MatrixNNd Cpoint)
 {
+    cout << "开始转化站心坐标系" << endl;
     this->helper = XYZ2BLH(datapath, savepath);
     this->point = helper.GetPoint();
     this->savepath = savepath;

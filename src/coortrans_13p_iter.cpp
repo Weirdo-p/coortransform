@@ -25,7 +25,7 @@ coortrans_13p_iter::coortrans_13p_iter(string pathA, string pathB, const int n, 
     this->V = this->SetV();
     this->residual = this->SetResidual(n);
     this->WriteToFile(savepath);
-    cout << "13参数转化完毕，成功写入文件" << endl;
+    cout << "七参数转换成功！ 相关数据已经写入    " << savepath << endl;
 }
 
 MatrixNNd coortrans_13p_iter::SetEstiRotation()
@@ -351,19 +351,30 @@ void coortrans_13p_iter::WriteToFile(string savepath)
     double miu = this->EstiMiu;
     MatrixNNd trans = this->EstiTranslation;
     out << "尺度因子：" << endl;
-    out << miu << endl;
+    out << setprecision(15) << miu << endl;
     out << endl;
     out << "平移矩阵" << endl;
     for(int i = 0; i < trans.rows(); ++i)
-        out << trans(i, 0) << endl;
+        out << setprecision(15) << trans(i, 0) << endl;
     out << endl;
 
-    out << "**************************非公共点残差*************************" << endl;
-    for(int i=0; i < this->residual.rows(); ++i)
+    out << "\t\t\t\t\t\t****************公共点残差*******************" << endl;
+    for(int i=0, k = 0; i < this->residual.rows(); ++i, ++k)
     {
-        if(i < 3 * n)
-            continue;
-        out << i - 3 * n << "\t\t\t\t" << residual(i, 0) << endl;
+        if(i > n * 3-1)
+            break;
+
+        out << k + 1 << "\t\t\t\t" << setprecision(15) << residual(i, 0) << "\t\t\t\t" << residual(i + 1, 0) << "\t\t\t\t" << residual(i + 2, 0) << endl;
+        i += 2;
     }
-    out.close();
+    out << endl;
+    out << "\t\t\t\t\t\t****************非公共点残差*******************" << endl;
+    for(int i = 0, k = 0; i < this->residual.rows(); ++i, ++k)
+    {
+        if(i < n * 3)
+            continue;
+        out << (k + 1) - n * 3 << "\t\t\t\t" << setprecision(15) << residual(i, 0) << "\t\t\t\t" << residual(i + 1, 0) << "\t\t\t\t" << residual(i + 2, 0) << endl;
+        i += 2;
+    }
+    out << endl;
 }

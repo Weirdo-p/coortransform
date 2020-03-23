@@ -202,18 +202,30 @@ void coortrans_4p::WriteToFile(string savepath)
     out << endl;
     out << "****************转换参数*****************" << endl;
     MatrixNNd Param = this->EstiParam + this->x0;
-    out << "DX\t\t\t\t" << Param(0, 0) << endl;
-    out << "DY\t\t\t\t" << Param(1, 0) << endl;
-    out << "DZ\t\t\t\t" << Param(2, 0) << endl;
-    out << "DK\t\t\t\t" << Param(3, 0) << endl;
+    out << "DX\t\t\t\t" << setprecision(15) << Param(0, 0) << endl;
+    out << "DY\t\t\t\t" << setprecision(15) << Param(1, 0) << endl;
+    out << "DZ\t\t\t\t" << setprecision(15) << Param(2, 0) << endl;
+    out << "DK\t\t\t\t" << setprecision(15) << Param(3, 0) << endl;
     out << endl;
 
 
-    out << "**************************非公共点残差*************************" << endl;
+    out << "****************公共点残差*******************" << endl;
     for(int i=0, k = 0; i < this->residual.rows(); ++i, ++k)
     {
-        out << k << "\t\t\t\t" << residual(i, 0) << "\t\t\t\t" << residual(i + 1, 0) << endl;
+        if(i > n * 2-1)
+            break;
+
+        out << k + 1 << setprecision(15) << "\t\t\t\t" << residual(i, 0) << "\t\t\t\t" << residual(i + 1, 0) << endl;
         i++;
+    }
+    out << endl;
+    out << "****************非公共点残差*******************" << endl;
+    for(int i = 0, k = 0; i < this->residual.rows(); ++i, ++k)
+    {
+        if(i < n * 2)
+            continue;
+        out << k - n * 2 + 1<< setprecision(15) << "\t\t\t\t" << residual(i, 0) << "\t\t\t\t" << residual(i + 1, 0) << endl;
+        ++i;
     }
     out << endl;
     out << "********** 115165.237, 118165,826, 0.000 转换结果 ***********" << endl;
@@ -221,6 +233,6 @@ void coortrans_4p::WriteToFile(string savepath)
     point << 115165.237, 
     118165.826;
     MatrixNNd result = this->SetCoefficient(point) * Param + point;
-    out << setprecision(15) << result(0, 0) << "\t" <<setiosflags(ios::right)<< setw(10) << result(1, 0);
+    out << setprecision(15) << setprecision(15) << result(0, 0) << "\t" <<setiosflags(ios::right)<< setw(10) << result(1, 0);
     out.close();
 }

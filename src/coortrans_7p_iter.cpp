@@ -9,10 +9,11 @@ coortrans_7p_iter::coortrans_7p_iter(string pathA, string pathB, const int n, st
     this->savepath = savepath;
     cout << "读取坐标文件中..." << endl;
     this->pointA = SetData(pathA);
-    this->pointB = SetData(pathB);
+     this->pointB = SetData(pathB);
     this->EstiParam = this->SetEstiParam();
     cout << "初始化中..." << endl;
     this->B = this->SetB(this->n);
+    cout << "test" << endl;
     this->P = this->SetP(n);
     this->L = this->SetL (n, this->EstiParam);
     cout << "开始迭代" << endl;
@@ -22,7 +23,7 @@ coortrans_7p_iter::coortrans_7p_iter(string pathA, string pathB, const int n, st
     this->iter(n);
     this->SetResidual(n);
     this->WriteToFile(savepath);
-    cout << "成功写入" << savepath << endl;
+    cout << "七参数转换成功！ 相关数据已经写入    " << savepath << endl;
 }
 
 MatrixN7d coortrans_7p_iter::SetCoefficient(MatrixN1d pointA)
@@ -226,33 +227,42 @@ void coortrans_7p_iter::WriteToFile(string savepath)
     out << endl;
     out << "****************转换参数*****************" << endl;
     MatrixNNd Param = this->EstiParam + this->x0;
-    out << "DX\t\t\t\t" << Param(0, 0) << endl;
-    out << "DY\t\t\t\t" << Param(1, 0) << endl;
-    out << "DZ\t\t\t\t" << Param(2, 0) << endl;
-    out << "RX\t\t\t\t" << Param(3, 0) << endl;
-    out << "RY\t\t\t\t" << Param(4, 0) << endl;
-    out << "RZ\t\t\t\t" << Param(5 ,0) << endl;
-    out << "DK\t\t\t\t" << Param(6, 0) << endl;
+    out << "DX\t\t\t\t" << setprecision(15) << Param(0, 0) << endl;
+    out << "DY\t\t\t\t" << setprecision(15) << Param(1, 0) << endl;
+    out << "DZ\t\t\t\t" << setprecision(15) << Param(2, 0) << endl;
+    out << "RX\t\t\t\t" << setprecision(15) << Param(3, 0) << endl;
+    out << "RY\t\t\t\t" << setprecision(15) << Param(4, 0) << endl;
+    out << "RZ\t\t\t\t" << setprecision(15) << Param(5 ,0) << endl;
+    out << "DK\t\t\t\t" << setprecision(15) << Param(6, 0) << endl;
     out << endl;
 
-    out << "******************各点位中误差********************" << endl;
-    out << "点号\t\t\t\t" << "中误差" << endl;
-    MatrixNNd NBB = this->B.transpose() * this->P * this->B;
-
-    MatrixNNd midErrors = this->B * NBB.inverse() * B.transpose();
-    for(int i = 0; i < midErrors.rows(); ++i)
-        for(int j = 0; j < midErrors.cols(); ++j)
-            if((i+1) % 2 == 0)
-                if(i==j)
-                    out << int((i+1)/2) << "\t\t\t\t" << sqrt(midErrors(i-1, j-1)+midErrors(i, j)) << endl;
-    out << endl;
-
-    out << "**************************非公共点残差*************************" << endl;
-    for(int i=0; i < this->residual.rows(); ++i)
+    out << "****************公共点残差*******************" << endl;
+    for(int i=0, k = 0; i < this->residual.rows(); ++i, ++k)
     {
-        if(i < 3 * n)
-            continue;
-        out << i - 3 * n << "\t\t\t\t" << residual(i, 0) << endl;
+        if(i > n * 3-1)
+            break;
+
+        out << k + 1 << "\t\t\t\t" << setprecision(15) << residual(i, 0) << "\t\t\t\t" << residual(i + 1, 0) << "\t\t\t\t" << residual(i + 2, 0) << endl;
+        i += 2;
     }
+    out << endl;
+    out << "****************非公共点残差*******************" << endl;
+    for(int i = 0, k = 0; i < this->residual.rows(); ++i, ++k)
+    {
+        if(i < n * 3)
+            continue;
+        out << (k + 1) - n * 3 << "\t\t\t\t" << setprecision(15) << residual(i, 0) << "\t\t\t\t" << residual(i + 1, 0) << "\t\t\t\t" << residual(i + 2, 0) << endl;
+        i += 2;
+    }
+    out << endl;
+    MatrixNNd test(3, 1);
+    test << -2100165.2849,
+    5496165.0138,
+    2894165.6030;
+
+    MatrixNNd testB = this->SetCoefficient(test);
+    MatrixNNd res = test + testB * Param;
+    out << "*** -2100165.2849, 5496165.0138, 2894165.6030 转换结果***" << endl;
+    out << "\t\t" << setprecision(15) << setprecision(15) << res(0, 0) <<"\t\t\t\t" << res(1, 0) << "\t\t\t\t" << res(2, 0) << endl;
     out.close();
 }
